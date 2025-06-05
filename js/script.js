@@ -68,7 +68,7 @@ function generateQRCode(userKey) {
 function updateQRLoop(userKey) {
   generateQRCode(userKey);
   if (qrInterval) clearInterval(qrInterval);
-  qrInterval = setInterval(() => generateQRCode(userKey), 60000); // every 1 minute
+  qrInterval = setInterval(() => generateQRCode(userKey), 1000); // every 1 minute
 }
 
 function validateScan(scannedCode) {
