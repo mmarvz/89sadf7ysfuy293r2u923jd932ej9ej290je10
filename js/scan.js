@@ -1,38 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>QR Bio Scanner</title>
 
-
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-<iframe src="background/background.html" class="background-frame"></iframe>
-  <div class="container">
-    <h2>QR Bio Generator & Scanner</h2>
-
-    <label for="user-select">Select Name</label>
-    <select id="user-select">
-      <option value="">-- Select --</option>
-      <option value="marvin">Malazaga Marvin</option>
-      <option value="aiza">Aiza Smith</option>
-      <option value="samuel">Samuel Doe</option>
-    </select>
-
-<div class="profile-row">
-  <img id="user-image" src="" style="display:none;" />
-  <div id="qrcode"></div>
-</div>
-    <button id="lock-button">🔒 Lock</button>
-   <button id="scan-btn">📷 Scan QR</button>
-<div style="display:flex;">
-<div id="scanner" style="display:none;"></div>
-<div id="message"></div>
-  </div>
-  </div>
-<script>
 let scanner; // Declare globally
 let scanEnabled = false;
 
@@ -89,8 +55,3 @@ function saveLogToLocalStorage(user, logEntry) {
     logs.push(logEntry);
     localStorage.setItem(user + ".txt", JSON.stringify(logs));
 }
-</script>
-  <script src="js/script.js"></script>
-  <script src="js/qr.js"></script>
-</body>
-</html>
